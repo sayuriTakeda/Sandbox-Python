@@ -1,0 +1,2 @@
+a = base.groupby(base.coluna)['coluna'].count().sort_values(ascending=False)
+pd.DataFrame(a).assign(Percentual = round((a/a.sum()*100),2)).rename(columns={'coluna': 'Quantidade de xxx', 'Percentual': 'Percentual(%)'})
