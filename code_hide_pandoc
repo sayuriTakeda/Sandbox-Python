@@ -1,0 +1,2 @@
+# abrir cmd e ir até pasta em que o arquivo .ipynb encontra-se
+jupyter nbconvert --to html --TemplateExporter.exclude_input=True nome_do_arquivo.ipynb
