@@ -1,0 +1,7 @@
+import emoji
+import warnings
+warnings.filterwarnings("ignore")
+
+print(emoji.emojize(':package: :package: :package:'))
+
+print(emoji.emojize('Fim :cactus: :cactus: :blossom: :cactus:'))
