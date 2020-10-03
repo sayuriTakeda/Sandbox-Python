@@ -1,9 +1,0 @@
-#### histogram ####
-import matplotlib.pyplot as plt
-plt.hist(base.coluna, 10, color = "#336699")
-plt.ylabel('Contagem')
-plt.xlabel('nome_coluna')
-plt.title('Histograma: nome_coluna')
-plt.grid(False)
-plt.text(20000, 2000, '$\mu=10, \sigma=10, mediana = 10$')
-plt.show()
