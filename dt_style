@@ -1,0 +1,12 @@
+def estilo(value):
+    
+  if value < 0:
+    color = 'red'
+  elif value > 0:
+    color = 'green'
+  else:
+    color = 'black'
+
+  return 'color: %s' % color
+
+tabela.style.applymap(estilo, subset=['coluna'])
