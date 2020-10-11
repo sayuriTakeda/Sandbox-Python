@@ -1,5 +1,5 @@
-import numpy as np
 import sklearn
+import numpy as np
 from sklearn import datasets
 from sklearn.neighbors import KNeighborsRegressor
 
