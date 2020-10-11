@@ -10,6 +10,11 @@ y = iris.target
 x_treino, x_validacao, y_treino, y_validacao = train_test_split(x, y, train_size = 0.7, random_state = 2)
 
 modelo = sklearn.neighbors.KNeighborsRegressor(n_neighbors=5, weights='uniform', algorithm='auto')
-y_validacao_estimado = modelo.fit(x_treino,y_treino).predict(x_validacao)
+modelo_fit = modelo.fit(x_treino,y_treino)
+y_validacao_estimado = modelo_fit.predict(x_validacao)
 
-np.column_stack((y_validacao, y_validacao_estimado))
+metrica = pd.DataFrame(np.column_stack((y_validacao, y_validacao_estimado)))
+
+round(metrica.assign(dif=abs(metrica[0] - metrica[1])).dif.sum(),2)
+
+#metrica
