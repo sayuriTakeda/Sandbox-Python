@@ -1,0 +1,1 @@
+format(10000.00, "0,.2f").replace(",", "X").replace(".", ",").replace("X", ".")
