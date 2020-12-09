@@ -1,0 +1,13 @@
+colunas_manter = df.columns[:]
+colunas_manter = this_cols.drop([
+    'xxx',
+    'xxx',
+    'xxx',
+    'xxx'
+])
+
+X = df[colunas_manter] 
+Y = df['var_resp']
+identificador = df['xxx']
+
+X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.33, stratify=df.var_resp)
