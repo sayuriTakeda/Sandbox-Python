@@ -1,0 +1,11 @@
+def padroniza(df, coluna):
+    # Remove espacos do comeco e fim da string
+    df[coluna] = df[coluna].str.strip()
+    # Lower case
+    df[coluna] = df[coluna].str.lower()
+    # Remove acentos
+    df[coluna] = df[coluna].str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8')
+    # Remove varios espacos seguidos
+    df[coluna] = df[coluna].replace('\s+', ' ', regex=True)
+    # Mantem apenas caracteres alfanumericos e espaco (obs: necessidade de verificar se faz sentido retirar).
+    df[coluna] = df[coluna].str.replace('[^a-zA-Z0-9 ]', '')
